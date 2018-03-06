@@ -1,3 +1,25 @@
-<p>
-  calculating works!
-</p>
+
+<div class="container">
+  <button class="btn btn-primary my-3">New Expression</button>
+  
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>X1</th>
+      <th>X2</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exp of expressions">
+        <td>{{exp.id}}</td>
+        <td>{{exp.a}}</td>
+        <td>{{exp.b}}</td>
+        <td>{{exp.c}}</td>
+        <td>{{exp.x1}}</td>
+        <td>{{exp.x2}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
