@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ExpressionService } from '../../shared-service/expression.service';
 import { Expression } from '../../expression';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calculating',
@@ -11,7 +12,7 @@ export class CalculatingComponent implements OnInit {
 
   private expressions:Expression[];
   
-  constructor(private _expressionService:ExpressionService) { }
+  constructor(private _expressionService:ExpressionService, private _router:Router) { }
 
   ngOnInit() {
     this._expressionService.getExpressions().subscribe((expressions)=>{
@@ -19,6 +20,13 @@ export class CalculatingComponent implements OnInit {
     },(error)=>{
       console.log(error);
     })
+  }
+
+  newExpression(){
+    let expression = new Expression();
+
+    //this._expressionService.setter(expression);
+    this._router.navigate(['/result']);
   }
 
 }

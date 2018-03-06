@@ -1,3 +1,17 @@
-<p>
-  result works!
-</p>
+<div class="container">
+  <form (ngSubmit)="processForm()">
+    <div class="form group">
+      <label for="a">a</label>
+      <input type="number" name="a" class="form-control" [(ngModel)]="expression.a">
+    </div>
+  <div class="form group">
+      <label for="b">b</label>
+      <input type="number" name="b" class="form-control" [(ngModel)]="expression.b">
+  </div>
+  <div class="form group">
+      <label for="c">c</label>
+      <input type="number" name="c" class="form-control" [(ngModel)]="expression.c">
+  </div>
+  <input type="submit" value="save" class="btn btn-success">
+  </form>
+</div>

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 /**
  *
  * @author User
@@ -38,7 +39,7 @@ public class ExpressionController {
     }
     
     @PostMapping("/expression")
-    public Expression createExpression(Expression expression){
+    public Expression createExpression(@RequestBody Expression expression){
         return expressionRepository.save(expression);
     }
     
