@@ -23,9 +23,7 @@ export class CalculatingComponent implements OnInit {
   }
 
   newExpression(){
-    let expression = new Expression();
-
-    //this._expressionService.setter(expression);
+   
     this._router.navigate(['/result']);
   }
 

@@ -1,5 +1,5 @@
 export class Expression {
-    id: Number;
+    
     a: Number;
     b: Number;
     c: Number;

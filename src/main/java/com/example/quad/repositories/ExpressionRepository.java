@@ -13,7 +13,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author User
  */
 public interface ExpressionRepository extends JpaRepository<Expression, Long>{
-
-    public Expression findOne(Long id);
     
 }

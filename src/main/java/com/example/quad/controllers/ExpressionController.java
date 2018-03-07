@@ -33,10 +33,6 @@ public class ExpressionController {
         return expressionRepository.findAll();
     }
     
-    @GetMapping("/expression/{id}")
-    public Expression getExpression(@PathVariable Long id){
-        return expressionRepository.findOne(id);
-    }
     
     @PostMapping("/expression")
     public Expression createExpression(@RequestBody Expression expression){

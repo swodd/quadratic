@@ -20,13 +20,9 @@ export class ExpressionService {
       .catch(this.errorHandler);
   }
 
-  getExpression(id: Number){
-    return this._http.get(this.baseUrl + '/expressions' + id, this.options).map((response:Response)=>response.json())
-      .catch(this.errorHandler);
-  }
-
+ 
   createExpression(expression: Expression){
-    return this._http.post(this.baseUrl + '/expressions', JSON.stringify(expression), this.options).map((response:Response)=>response.json())
+    return this._http.post(this.baseUrl + '/expression', JSON.stringify(expression), this.options).map((response:Response)=>response.json())
       .catch(this.errorHandler);
   }
 
